@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wu-Tang Clan - Enter the Wu-Tang (36 Chambers)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Times New Roman', Times, serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            align-items: center;
+        }
+
+        .content {
+            padding-right: 2rem;
+            animation: fadeInLeft 1.5s ease-out;
+        }
+
+        .album-cover {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInRight 1.5s ease-out 0.5s both;
+        }
+
+        .album-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 
+                0 20px 40px rgba(255, 255, 255, 0.1),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .album-image:hover {
+            transform: scale(1.05);
+            box-shadow: 
+                0 25px 50px rgba(255, 255, 255, 0.15),
+                0 0 0 1px rgba(255, 255, 255, 0.2);
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: #d4a547;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: #d4a547;
+            margin: 2rem 0 1rem 0;
+            letter-spacing: 1px;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #e0e0e0;
+            font-weight: 300;
+        }
+
+        .bio {
+            margin-bottom: 2rem;
+            color: #cccccc;
+        }
+
+        .tracklist {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .tracklist li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s ease, padding-left 0.3s ease;
+        }
+
+        .tracklist li:hover {
+            color: #d4a547;
+            padding-left: 1rem;
+        }
+
+        .track-number {
+            font-weight: 600;
+            color: #d4a547;
+            min-width: 30px;
+        }
+
+        .track-title {
+            flex: 1;
+            margin-left: 1rem;
+        }
+
+        .track-duration {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .album-info {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid #d4a547;
+        }
+
+        .album-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .album-info strong {
+            color: #d4a547;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+            
+            .content {
+                padding-right: 0;
+                order: 2;
+            }
+            
+            .album-cover {
+                order: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .container {
+                gap: 2rem;
+            }
+            
+            .album-info {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Wu-Tang Clan</h1>
+            
+            <p class="intro">
+                Legendary hip-hop collective that revolutionized rap music and culture in the 1990s.
+            </p>
+            
+            <div class="bio">
+                <p>Wu-Tang Clan is an American hip hop group formed in Staten Island, New York City, in 1992. The group was formed by RZA, who served as the de facto producer and leader, and consisted of rappers Method Man, Ol' Dirty Bastard, Raekwon, Ghostface Killah, Inspectah Deck, U-God, Masta Killa, and GZA.</p>
+                
+                <p>Known for their unique blend of martial arts philosophy, Five Percent Nation teachings, and street narratives, Wu-Tang Clan created a distinctive sound that combined gritty, lo-fi production with complex, metaphorical lyricism. Their debut album "Enter the Wu-Tang (36 Chambers)" is widely regarded as one of the greatest hip-hop albums of all time.</p>
+            </div>
+
+            <div class="album-info">
+                <p><strong>Release Date:</strong> November 9, 1993</p>
+                <p><strong>Label:</strong> Loud/RCA Records</p>
+                <p><strong>Producer:</strong> RZA</p>
+                <p><strong>Genre:</strong> East Coast Hip Hop, Hardcore Hip Hop</p>
+                <p><strong>Length:</strong> 61:03</p>
+            </div>
+
+            <h2>Track Listing</h2>
+            <ol class="tracklist">
+                <li>
+                    <span class="track-number">1.</span>
+                    <span class="track-title">Bring da Ruckus</span>
+                    <span class="track-duration">4:09</span>
+                </li>
+                <li>
+                    <span class="track-number">2.</span>
+                    <span class="track-title">Shame on a Nigga</span>
+                    <span class="track-duration">2:57</span>
+                </li>
+                <li>
+                    <span class="track-number">3.</span>
+                    <span class="track-title">Clan in da Front</span>
+                    <span class="track-duration">4:34</span>
+                </li>
+                <li>
+                    <span class="track-number">4.</span>
+                    <span class="track-title">Wu-Tang: 7th Chamber</span>
+                    <span class="track-duration">6:04</span>
+                </li>
+                <li>
+                    <span class="track-number">5.</span>
+                    <span class="track-title">Can It Be All So Simple / Intermission</span>
+                    <span class="track-duration">6:53</span>
+                </li>
+                <li>
+                    <span class="track-number">6.</span>
+                    <span class="track-title">Da Mystery of Chessboxin'</span>
+                    <span class="track-duration">4:48</span>
+                </li>
+                <li>
+                    <span class="track-number">7.</span>
+                    <span class="track-title">Wu-Tang Clan Ain't Nuthing ta F' Wit</span>
+                    <span class="track-duration">3:36</span>
+                </li>
+                <li>
+                    <span class="track-number">8.</span>
+                    <span class="track-title">C.R.E.A.M.</span>
+                    <span class="track-duration">4:12</span>
+                </li>
+                <li>
+                    <span class="track-number">9.</span>
+                    <span class="track-title">Method Man</span>
+                    <span class="track-duration">3:28</span>
+                </li>
+                <li>
+                    <span class="track-number">10.</span>
+                    <span class="track-title">Protect Ya Neck</span>
+                    <span class="track-duration">4:51</span>
+                </li>
+                <li>
+                    <span class="track-number">11.</span>
+                    <span class="track-title">Teardropz</span>
+                    <span class="track-duration">2:25</span>
+                </li>
+                <li>
+                    <span class="track-number">12.</span>
+                    <span class="track-title">Wu-Tang: 7th Chamber - Part II</span>
+                    <span class="track-duration">3:29</span>
+                </li>
+            </ol>
+        </div>
+
+        <div class="album-cover">
+            <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Wu-TangClanEntertheWu-TangCover.jpg" 
+                 alt="Enter the Wu-Tang (36 Chambers) Album Cover" 
+                 class="album-image"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div style="display: none; text-align: center; padding: 3rem; border: 2px dashed #d4a547; border-radius: 8px; color: #d4a547;">
+                <p style="font-size: 1.2rem; margin-bottom: 1rem;">🎵</p>
+                <p>Enter the Wu-Tang<br>(36 Chambers)</p>
+                <p style="font-size: 0.9rem; color: #888; margin-top: 1rem;">Album Cover</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
